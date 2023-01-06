@@ -9,9 +9,15 @@ public class HelloController {
 	@RequestMapping("/hello")  
     public String display()  
     {  
-//		if(true)
-//			throw new NullPointerException();
         return "hello";  
     }     
+
+	@RequestMapping("/testException")  
+	public String displayException()  
+	{  
+		if(true)
+			throw new NullPointerException();
+		return "abc";  
+	}     
 	
 }
